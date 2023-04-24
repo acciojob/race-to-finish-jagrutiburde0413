@@ -25,7 +25,7 @@ let promise5=new Promise(function(resolve){
 	},Math.floor(Math.random()*5000))
 })
 window.promises = [promise2,promise2,promise3,promise4,promise5];
-
-promises.then((value)=>{
+const p=Promise.any(promises)
+p.then((value)=>{
 	result.innerText=value;
 })
